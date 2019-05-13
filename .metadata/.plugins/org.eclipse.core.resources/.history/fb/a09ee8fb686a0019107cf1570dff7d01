@@ -1,0 +1,30 @@
+package Graph;
+
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
+
+public class NoOfDependency  {
+	 public static void main(String [] args)throws IOException{
+	 LinkedHashMap<Integer,Integer> adjList=new LinkedHashMap<>();
+    //LinkedList<String> clist=new LinkedList<String>();
+   // LinkedList<String> oplist=new LinkedList<>();
+    //LinkedList<String> op;
+    //HashMap<String,Integer>visited=new HashMap<>();
+	 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+     int t = Integer.parseInt(br.readLine());
+     for(int i=0; i<t; i++) {
+    	 String[] input = br.readLine().trim().split(" ");
+    	 int e =  Integer.parseInt(input[0]);
+         int f = Integer.parseInt(input[1]);
+    	 String []  input1 = br.readLine().trim().split(" ");
+     for(String d:input1) {System.out.println(d);}
+   //  System.out.println("hi"+input1.length);
+     for(int l =0 ;l<(input1.length); l=l+2) {
+    	 adjList.put(Integer.parseInt(input1[l]),Integer.parseInt(input1[l+1]));
+     }System.out.println(adjList);
+     }
+     
+}
+}
